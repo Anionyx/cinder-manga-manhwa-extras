@@ -1,0 +1,10 @@
+// Experimental Cinder source for MangaFire; website parsing unverified.
+var S={id:"mangafire-extra",name:"MangaFire (Experimental)",version:"0.1.0",icon:"BK",description:"Unverified MangaFire adapter",contentType:"manga",contentTypes:["manga"],contentSubtypes:["manga","manhwa"],capabilities:{search:true,discover:false,download:false,resolve:false,manga:true},base:"https://mangafire.to"};
+S.clean=function(s){return String(s||"").replace(/<[^>]*>/g," ").replace(/&amp;/g,"&").replace(/\s+/g," ").trim()};
+S.abs=function(s){return /^https?:/i.test(s)?s:this.base+(s[0]==="/"?"":"/")+s};
+S.html=async function(url){var r=await cinder.fetch(url,{headers:{Referer:this.base+"/"},timeout:20000});if(!r||r.status<200||r.status>=300)throw Error("Source unavailable");return String(r.data||"")};
+S.search=async function(q){if(!q)return [];var h=await this.html(this.base+"/?s="+encodeURIComponent(q)),re=/<a[^>]*href=["']([^"']+)["'][^>]*title=["']([^"']+)["'][^>]*>/gi,m,out=[],seen={};while((m=re.exec(h))){var u=this.abs(m[1]);if(!u.startsWith(this.base)||seen[u])continue;seen[u]=true;out.push({id:u,title:this.clean(m[2]),url:u,source:this.name,contentType:"manga",format:"manga"})}return out};
+S.getMangaDetails=async function(id){var h=await this.html(id),title=this.clean((h.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)||[])[1]);return {id:id,title:title,contentType:"manga"}};
+S.getChapters=async function(id){var h=await this.html(id),re=/<a[^>]*href=["']([^"']*(?:chapter|chap)[^"']*)["'][^>]*>([\s\S]*?)<\/a>/gi,m,out=[],seen={};while((m=re.exec(h))){var u=this.abs(m[1]);if(seen[u])continue;seen[u]=true;out.push({id:u,title:this.clean(m[2]),chapterNumber:out.length+1})}return out.reverse()};
+S.getPages=async function(id){var h=await this.html(id),re=/<img[^>]*(?:data-src|src)=["']([^"']+)["'][^>]*>/gi,m,out=[],seen={};while((m=re.exec(h))){var u=this.abs(m[1]);if(!/\.(?:jpg|jpeg|png|webp)(?:\?|$)/i.test(u)||/logo|cover|avatar|banner|icon/i.test(u)||seen[u])continue;seen[u]=true;out.push({url:u,headers:{Referer:id}})}if(!out.length)throw Error("No page images found");return out};
+__cinderExport=S;
