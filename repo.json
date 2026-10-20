@@ -1,0 +1,14 @@
+{
+  "name": "Cinder Manga & Manhwa Extras (Experimental)",
+  "author": "Anionyx",
+  "extensions": [
+    {
+      "id": "mangakatana-extra",
+      "name": "MangaKatana (Experimental)",
+      "version": "0.1.0",
+      "description": "Unverified experimental adapter",
+      "contentType": "manga",
+      "scriptUrl": "https://raw.githubusercontent.com/Anionyx/cinder-manga-manhwa-extras/main/extensions/mangakatana.js"
+    }
+  ]
+}
