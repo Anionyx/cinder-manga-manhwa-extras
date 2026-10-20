@@ -9,6 +9,86 @@
       "description": "Unverified experimental adapter",
       "contentType": "manga",
       "scriptUrl": "https://raw.githubusercontent.com/Anionyx/cinder-manga-manhwa-extras/main/extensions/mangakatana.js"
+    },
+    {
+      "id": "mangafire-extra",
+      "name": "MangaFire (Experimental)",
+      "version": "0.1.0",
+      "description": "Unverified adapter; may not load chapters or pages",
+      "contentType": "manga",
+      "scriptUrl": "https://raw.githubusercontent.com/Anionyx/cinder-manga-manhwa-extras/main/extensions/mangafire.js"
+    },
+    {
+      "id": "mangapill-extra",
+      "name": "Mangapill (Experimental)",
+      "version": "0.1.0",
+      "description": "Unverified adapter; may not load chapters or pages",
+      "contentType": "manga",
+      "scriptUrl": "https://raw.githubusercontent.com/Anionyx/cinder-manga-manhwa-extras/main/extensions/mangapill.js"
+    },
+    {
+      "id": "allmanga-extra",
+      "name": "AllManga (Experimental)",
+      "version": "0.1.0",
+      "description": "Unverified adapter; may not load chapters or pages",
+      "contentType": "manga",
+      "scriptUrl": "https://raw.githubusercontent.com/Anionyx/cinder-manga-manhwa-extras/main/extensions/allmanga.js"
+    },
+    {
+      "id": "flamecomics-extra",
+      "name": "Flame Comics (Experimental)",
+      "version": "0.1.0",
+      "description": "Unverified adapter; may not load chapters or pages",
+      "contentType": "manga",
+      "scriptUrl": "https://raw.githubusercontent.com/Anionyx/cinder-manga-manhwa-extras/main/extensions/flamecomics.js"
+    },
+    {
+      "id": "hivetoons-extra",
+      "name": "HiveToons (Experimental)",
+      "version": "0.1.0",
+      "description": "Unverified adapter; may not load chapters or pages",
+      "contentType": "manga",
+      "scriptUrl": "https://raw.githubusercontent.com/Anionyx/cinder-manga-manhwa-extras/main/extensions/hivetoons.js"
+    },
+    {
+      "id": "mangademon-extra",
+      "name": "MangaDemon (Experimental)",
+      "version": "0.1.0",
+      "description": "Unverified adapter; may not load chapters or pages",
+      "contentType": "manga",
+      "scriptUrl": "https://raw.githubusercontent.com/Anionyx/cinder-manga-manhwa-extras/main/extensions/mangademon.js"
+    },
+    {
+      "id": "manganato-extra",
+      "name": "MangaNato (Experimental)",
+      "version": "0.1.0",
+      "description": "Unverified adapter; may not load chapters or pages",
+      "contentType": "manga",
+      "scriptUrl": "https://raw.githubusercontent.com/Anionyx/cinder-manga-manhwa-extras/main/extensions/manganato.js"
+    },
+    {
+      "id": "mangabat-extra",
+      "name": "MangaBat (Experimental)",
+      "version": "0.1.0",
+      "description": "Unverified adapter; may not load chapters or pages",
+      "contentType": "manga",
+      "scriptUrl": "https://raw.githubusercontent.com/Anionyx/cinder-manga-manhwa-extras/main/extensions/mangabat.js"
+    },
+    {
+      "id": "toonily-extra",
+      "name": "Toonily (Experimental)",
+      "version": "0.1.0",
+      "description": "Unverified adapter; may not load chapters or pages",
+      "contentType": "manga",
+      "scriptUrl": "https://raw.githubusercontent.com/Anionyx/cinder-manga-manhwa-extras/main/extensions/toonily.js"
+    },
+    {
+      "id": "manhwatop-extra",
+      "name": "ManhwaTop (Experimental)",
+      "version": "0.1.0",
+      "description": "Unverified adapter; may not load chapters or pages",
+      "contentType": "manga",
+      "scriptUrl": "https://raw.githubusercontent.com/Anionyx/cinder-manga-manhwa-extras/main/extensions/manhwatop.js"
     }
   ]
 }
