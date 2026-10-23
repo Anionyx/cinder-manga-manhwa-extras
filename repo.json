@@ -89,6 +89,16 @@
       "description": "Unverified adapter; may not load chapters or pages",
       "contentType": "manga",
       "scriptUrl": "https://raw.githubusercontent.com/Anionyx/cinder-manga-manhwa-extras/main/extensions/manhwatop.js"
+    },
+    {
+      "id": "gcd-comics-experimental",
+      "name": "Grand Comics Database (Experimental)",
+      "version": "0.1.0",
+      "description": "GCD comic series search; metadata only, no covers or reading. Experimental.",
+      "contentType": "comics",
+      "language": "English",
+      "scriptUrl": "https://raw.githubusercontent.com/Anionyx/cinder-manga-manhwa-extras/main/extensions/gcd-comics.js",
+      "minCinderVersion": "2.0.0"
     }
   ]
 }
